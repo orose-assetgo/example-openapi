@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: 'Dummy API'
+  version: 0.0.1
+paths:
+  '/thing/{id}':
+    get:
+      description: 'Get a thing'
+      operationId: 93e768d4be2f8152e0c5df1438bc2230
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'The ID of the thing'
+          required: true
+      responses:
+        '200':
+          description: 'Details about the thing'
+        '404':
+          description: "If the thing doesn't exist"
+    delete:
+      description: 'Update a thing'
+      operationId: 28fd045970ee405580087d043a42eb28
+      responses:
+        '204':
+          description: 'The thing has been deleted'
+    patch:
+      description: 'Update a thing'
+      operationId: c95a75370a981400f41f4766f7978746
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'The ID of the thing'
+          required: true
+      responses:
+        '200':
+          description: 'Details about the thing after the changes'
+        '404':
+          description: "If the thing doesn't exist"
+  /thing:
+    post:
+      description: 'Create a new thing'
+      operationId: 5fe04f54b66876b8713e107cd1279004
+      responses:
+        '200':
+          description: 'If the creation is successful'
